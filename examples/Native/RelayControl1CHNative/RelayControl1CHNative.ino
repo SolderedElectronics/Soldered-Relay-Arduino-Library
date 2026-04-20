@@ -35,9 +35,11 @@ void loop()
 {
     // Turn on relay
     Relay.relayControl(CHANNEL1, HIGH);
+    Serial.println("Current configured state of Channel 1 is: "+String(Relay.getChannelState(CHANNEL1)));
     delay(1500);
 
     // Turn off relay
     Relay.relayControl(CHANNEL1, LOW);
+    Serial.println("Current configured state of Channel 1 is: "+String(Relay.getChannelState(CHANNEL1)));
     delay(1500);
 }

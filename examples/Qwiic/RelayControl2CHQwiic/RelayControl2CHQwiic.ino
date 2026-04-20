@@ -1,10 +1,10 @@
 /**
  **************************************************
  *
- * @file        RelayControl1CH.ino
- * @brief       Relay control example to show how to control 1 channel relay using easyC comunication
+ * @file        RelayControl2CHQwiic.ino
+ * @brief       Relay control example to show how to control 2 channel relay using Qwiic comunication
  *
- *              Product:  solde.red/333021
+ *              Product: solde.red/333025
  *
  * @authors     Robert Peric @ soldered.com
  ***************************************************/
@@ -26,11 +26,23 @@ void setup()
 
 void loop()
 {
-    // Turn on relay
+    // Turn on relay 1
     Relay.relayControl(CHANNEL1, HIGH);
+    Serial.println("Current configured state of Channel 1 is: "+String(Relay.getChannelState(CHANNEL1)));
     delay(1500);
 
-    // Turn off relay
+    // Turn off relay 1
     Relay.relayControl(CHANNEL1, LOW);
+    Serial.println("Current configured state of Channel 1 is: "+String(Relay.getChannelState(CHANNEL1)));
+    delay(1500);
+
+    // Turn on relay 2
+    Relay.relayControl(CHANNEL2, HIGH);
+    Serial.println("Current configured state of Channel 2 is: "+String(Relay.getChannelState(CHANNEL2)));
+    delay(1500);
+
+    // Turn off relay 2
+    Relay.relayControl(CHANNEL2, LOW);
+    Serial.println("Current configured state of Channel 2 is: "+String(Relay.getChannelState(CHANNEL2)));
     delay(1500);
 }
