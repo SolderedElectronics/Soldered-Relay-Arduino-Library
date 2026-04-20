@@ -94,13 +94,13 @@ void CH_Relay::relayControl(int channel, int mode)
 /**
  * @brief       getChannelState returns if a relay channel has been turned on or off
  *
- * @param       int channel 
+ * @param       int channel
  *
  * @returns     either HIGH or LOW
  */
 int CH_Relay::getChannelState(int channel)
 {
-    return channelState[(channel == CHANNEL4)?3:channel]; 
+    return channelState[(channel == CHANNEL4) ? 3 : channel];
 }
 
 /**
@@ -112,5 +112,5 @@ int CH_Relay::getChannelState(int channel)
  */
 void CH_Relay::setChannelState(int channel, int mode)
 {
-    channelState[(channel == CHANNEL4)?3:channel] = mode;
+    channelState[(channel == CHANNEL4) ? 3 : channel] = mode;
 }

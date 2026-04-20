@@ -38,7 +38,7 @@ class CH_Relay : public EasyC
   private:
     int pin1, pin2, pin3, pin4;
     void setChannelState(int channel, int mode);
-    int channelState[4] = {0,0,0,0};
+    int channelState[4] = {0, 0, 0, 0};
 };
 
 #endif
