@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['defaultaddress_0',['defaultAddress',['../class_easy_c.html#a9052ae674b3553bbb19283278299f395',1,'EasyC']]]
+  ['channelstate_0',['channelState',['../class_c_h___relay.html#abae53472c6d1632a52c282418b1ced1f',1,'CH_Relay']]]
 ];
