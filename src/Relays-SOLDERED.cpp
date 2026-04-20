@@ -88,4 +88,29 @@ void CH_Relay::relayControl(int channel, int mode)
         data[1] = mode;
         sendData((const uint8_t *)data, 2);
     }
+    setChannelState(channel, mode);
+}
+
+/**
+ * @brief       getChannelState returns if a relay channel has been turned on or off
+ *
+ * @param       int channel 
+ *
+ * @returns     either HIGH or LOW
+ */
+int CH_Relay::getChannelState(int channel)
+{
+    return channelState[(channel == CHANNEL4)?3:channel]; 
+}
+
+/**
+ * @brief       setChannelState saves locally the last set state olf a specific relay
+ *
+ * @param       int channel, specific relay channel
+ *
+ * @param       int mode either HIGH or LOW
+ */
+void CH_Relay::setChannelState(int channel, int mode)
+{
+    channelState[(channel == CHANNEL4)?3:channel] = mode;
 }

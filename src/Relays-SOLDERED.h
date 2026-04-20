@@ -30,12 +30,15 @@ class CH_Relay : public EasyC
     CH_Relay(int _pin1, int _pin2 = -1, int _pin3 = -1, int _pin4 = -1);
     CH_Relay();
     void relayControl(int channel, int mode);
+    int getChannelState(int channel);
 
   protected:
     void initializeNative();
 
   private:
     int pin1, pin2, pin3, pin4;
+    void setChannelState(int channel, int mode);
+    int channelState[4] = {0,0,0,0};
 };
 
 #endif
