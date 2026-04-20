@@ -39,17 +39,21 @@ void loop()
 {
     // Turn on relay 1
     Relay.relayControl(CHANNEL1, HIGH);
+    Serial.println("Current configured state of Channel 1 is: "+String(Relay.getChannelState(CHANNEL1)));
     delay(1500);
 
     // Turn off relay 1
     Relay.relayControl(CHANNEL1, LOW);
+    Serial.println("Current configured state of Channel 1 is: "+String(Relay.getChannelState(CHANNEL1)));
     delay(1500);
 
     // Turn on relay 2
     Relay.relayControl(CHANNEL2, HIGH);
+    Serial.println("Current configured state of Channel 2 is: "+String(Relay.getChannelState(CHANNEL2)));
     delay(1500);
 
     // Turn off relay 2
     Relay.relayControl(CHANNEL2, LOW);
+    Serial.println("Current configured state of Channel 2 is: "+String(Relay.getChannelState(CHANNEL2)));
     delay(1500);
 }
